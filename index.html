@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe | SkillCraft Task 03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Tic-Tac-Toe</h1>
+     
+    </header>
+
+    <section class="controls">
+      <div class="mode">
+        <label>
+          <input type="radio" name="mode" value="pvp" checked>
+          Player vs Player
+        </label>
+        <label>
+          <input type="radio" name="mode" value="pvc">
+          Player vs Computer
+        </label>
+      </div>
+
+      <!-- New Difficulty Selector -->
+      <div class="difficulty">
+        <label for="difficultyLevel">Difficulty:</label>
+        <select id="difficultyLevel">
+          <option value="easy">Easy 😎</option>
+          <option value="medium" selected>Medium 🙂</option>
+          <option value="hard">Hard 😈</option>
+        </select>
+      </div>
+
+      <div class="options">
+        <label for="firstPlayer">First player:</label>
+        <select id="firstPlayer">
+          <option value="X">X (You)</option>
+          <option value="O">O</option>
+        </select>
+        <button id="restartBtn" class="btn">Restart</button>
+      </div>
+    </section>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-label="Tic Tac Toe board" role="grid">
+        <button class="cell" data-index="0" aria-label="cell 1" role="gridcell"></button>
+        <button class="cell" data-index="1" aria-label="cell 2" role="gridcell"></button>
+        <button class="cell" data-index="2" aria-label="cell 3" role="gridcell"></button>
+        <button class="cell" data-index="3" aria-label="cell 4" role="gridcell"></button>
+        <button class="cell" data-index="4" aria-label="cell 5" role="gridcell"></button>
+        <button class="cell" data-index="5" aria-label="cell 6" role="gridcell"></button>
+        <button class="cell" data-index="6" aria-label="cell 7" role="gridcell"></button>
+        <button class="cell" data-index="7" aria-label="cell 8" role="gridcell"></button>
+        <button class="cell" data-index="8" aria-label="cell 9" role="gridcell"></button>
+      </div>
+    </section>
+
+    <section class="status-area">
+      <div id="status" class="status">X's turn</div>
+      <div class="scoreboard">
+        <div>X: <span id="scoreX">0</span></div>
+        <div>O: <span id="scoreO">0</span></div>
+        <div>Draws: <span id="scoreD">0</span></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Interactive and engaging tic-tac-toe — built for SkillCraft Task 03</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
